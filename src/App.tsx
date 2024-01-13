@@ -3,9 +3,10 @@ import './App.css';
 import AddPizzaForm from './components/AddPizzaForm';
 import Pizza from './modals/Pizza';
 import DisplayPizzas from './components/DisplayPizzas';
+import demoPizzas from './demoPizzas';
 
 const App: FC = () => {
-  const [pizzasList, setPizzasList] = useState<Pizza[]>([]);
+  const [pizzasList, setPizzasList] = useState<Pizza[]>(demoPizzas);
 
   const addPizza = (newPizza: Pizza) => {
     setPizzasList([...pizzasList, newPizza]);
